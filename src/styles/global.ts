@@ -1,11 +1,16 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, DefaultTheme } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<Partial<DefaultTheme>>`
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: auto;
+}
+
+body {
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.gray[300]};
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -17,9 +22,21 @@ html {
   }
 }
 
+body, input, textarea, button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 button {
   cursor: pointer;
 }
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.green[500]};
+}
+
 
 [disabled] {
   opacity: 0.2;
