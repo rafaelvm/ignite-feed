@@ -1,11 +1,21 @@
 export const theme = {
   colors: {
-    white: '#FFFFFF',
-    background: '#F0F2F5',
-    black: '#444444',
-    darkBlue: '#005f6b',
-    mediumBlue: '#008c9e',
-    ciano: '#00b4cc',
-    lightBlue: '#00dffc',
+    white: '#fff',
+    background: '#121214',
+
+    gray: {
+      100: '#e1e1e6',
+      300: '#c4c4cc',
+      400: '#8d8d99',
+      600: '#323238',
+      700: '#29292e',
+      800: '#202024',
+      900: '#121214',
+    },
+
+    green: {
+      300: '#00B37E',
+      500: '#00875f',
+    },
   },
 }
